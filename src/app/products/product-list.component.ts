@@ -24,8 +24,8 @@ export class ProductListComponent {
       price: product.price? product.price*1.36:0,
       searchKey:[product.productName]
     } as Product))),
-    catchError((err) => {
-      this.errorMessage = err;
+    catchError((error) => {
+      this.errorMessage = error;
       return EMPTY;
     })
   );
